@@ -6,123 +6,106 @@ import IconBrandWhatsapp from "@icons/IconBrandWhatsapp.astro";
 import IconBrandX from "@icons/IconBrandX.astro";
 import IconDeviceMobile from "@icons/IconDeviceMobile.astro";
 import IconMail from "@icons/IconMail.astro";
+
+const a = "";
 ---
 
-<footer class="bg-eerie-black pt-16 pb-9 px-10">
-    <div class="flex flex-wrap">
-        <div class="w-full flex flex-col gap-8 pb-8">
-            <img
-                src="https://www.ansonika.com/panagea/img/logo.svg"
-                width="150"
-                height="36"
-                alt="Logo"
-            />
-            <p class="text-wrap text-white/70">
-                Mea nibh meis philosophia eu. Duis legimus efficiantur ea sea.
-                Id placerat tacimates definitionem sea, prima quidam vim no. Duo
-                nobis persecuti cu. Nihil facilisi indoctum an vix, ut delectus
-                expetendis vis.
-            </p>
-            <div class="flex gap-2">
-                <h5 class="font-medium uppercase tracking-[2px] text-sm">
-                    Síguenos en
-                </h5>
-                <ul class="flex gap-4">
-                    <li><a href="#"><IconBrandFacebook /></a></li>
-                    <li><a href="#"><IconBrandX /></a></li>
-                    <li><a href="#"><IconBrandInstagram /></a></li>
-                    <li><a href="#"><IconBrandTiktok /></a></li>
-                    <li><a href="#"><IconBrandWhatsapp /></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="flex flex-col gap-5 w-1/2">
-            <h5 class="font-medium text-lg">Enlaces útiles</h5>
-            <ul class="text-white/70">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">News &amp; Events</a></li>
-                <li><a href="#">Contacts</a></li>
-            </ul>
-        </div>
-        <div class="w-1/2 flex flex-col gap-4">
-            <div class="flex flex-col gap-5">
-                <h5 class="font-medium text-lg">Contacte con nosotros</h5>
-                <div class="flex flex-col gap-2 text-white/70">
-                    <a href="tel:+584242401234" class="flex gap-2">
-                        <IconDeviceMobile />
-                        +58 (424) 240-1234
-                    </a>
-                    <a href="mailto:info@example.com" class="flex gap-2">
-                        <IconMail />
-                        info@example.com
-                    </a>
-                </div>
-            </div>
-            <div class="flex flex-col gap-5">
-                <h5 class="font-medium text-lg">Newsletter</h5>
-                <div>
-                    <div aria-error="message-newsletter"></div>
-                    <input
-                        type="email"
-                        placeholder="Your email"
-                        autocomplete="email"
-                    />
-                    <button type="submit">Submit</button>
-                </div>
-            </div>
-        </div>
+<footer class="bg-eerie-black px-10 pb-9 pt-16">
+  <div class="flex flex-wrap md:flex-nowrap md:gap-5">
+    <div class="flex w-full flex-col gap-8 pb-8 md:w-1/2">
+      <img
+        src="https://www.ansonika.com/panagea/img/logo.svg"
+        width="150"
+        height="36"
+        alt="Logo"
+      />
+      <p class="text-wrap text-white/70">
+        Mea nibh meis philosophia eu. Duis legimus efficiantur ea sea. Id
+        placerat tacimates definitionem sea, prima quidam vim no. Duo nobis
+        persecuti cu. Nihil facilisi indoctum an vix, ut delectus expetendis
+        vis.
+      </p>
+      <div class="flex gap-2">
+        <h5 class="text-sm font-medium uppercase tracking-[2px]">
+          Síguenos en
+        </h5>
+        <ul class="flex gap-4">
+          <li><a href="#"><IconBrandFacebook /></a></li>
+          <li><a href="#"><IconBrandX /></a></li>
+          <li><a href="#"><IconBrandInstagram /></a></li>
+          <li><a href="#"><IconBrandTiktok /></a></li>
+          <li><a href="#"><IconBrandWhatsapp /></a></li>
+        </ul>
+      </div>
     </div>
-    <hr class="opacity-10 my-8 border-bright-gray" />
-    <div class="flex flex-col gap-4">
-        <div class="flex flex-wrap gap-2">
-            <select
-                name="language"
-                id="select_language"
-                title="Selección de idioma"
-            >
-                <option value="es">Español</option>
-                <option value="en" disabled>Inglés</option>
-            </select>
-            <select
-                name="currency"
-                id="select_currency"
-                title="Selección de moneda"
-            >
-                <option
-                    value="926"
-                    aria-name="Bolívar Soberano"
-                    aria-symbol="Bs."
-                    title="Bolívar Soberano">Bolívar Soberano (VED)</option
-                >
-                <option
-                    value="840"
-                    aria-name="Dólar Estadounidense"
-                    aria-symbol="$"
-                    title="Dólar Estadounidense"
-                    disabled>Dólar Estadounidense (USD)</option
-                >
-            </select>
-            <div class="flex flex-wrap gap-2.5">
-                <img
-                    src="/payment_methods.svg"
-                    alt="Visa, Mastercard, Paypal"
-                />
-                <img src="/zinli_card.png" alt="Zinli Card" class="h-[30px]" />
-                <img
-                    src="/binance_logo.svg"
-                    alt="Binance Logo"
-                    class="h-[30px]"
-                />
-            </div>
-        </div>
-        <div class="flex gap-2 text-white/50 copyrigth text-sm font-medium">
-            <a href="#0">Terms and conditions</a>
-            <span class="text-xs select-none">&nbsp;|&nbsp;</span>
-            <a href="#0">Privacy</a>
-            <span class="text-xs select-none">&nbsp;|&nbsp;</span>
-            <span>© Panagea</span>
-        </div>
+    <div class="flex w-1/2 flex-col gap-5 md:flex-1">
+      <h5 class="text-lg font-medium">Enlaces útiles</h5>
+      <ul class="text-white/70">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">News &amp; Events</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
     </div>
+    <div class="flex w-1/2 flex-col gap-4 md:flex-1">
+      <div class="flex flex-col gap-5">
+        <h5 class="text-lg font-medium">Contacte con nosotros</h5>
+        <div class="flex flex-col gap-2 text-white/70">
+          <a href="tel:+584242401234" class="flex gap-2">
+            <IconDeviceMobile />
+            +58 (424) 240-1234
+          </a>
+          <a href="mailto:info@example.com" class="flex gap-2">
+            <IconMail />
+            info@example.com
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-5">
+        <h5 class="text-lg font-medium">Newsletter</h5>
+        <div>
+          <div aria-error="message-newsletter"></div>
+          <input type="email" placeholder="Your email" autocomplete="email" />
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="my-8 border-bright-gray opacity-10" />
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-wrap gap-2">
+      <select name="language" id="select_language" title="Selección de idioma">
+        <option value="es">Español</option>
+        <option value="en" disabled>Inglés</option>
+      </select>
+      <select name="currency" id="select_currency" title="Selección de moneda">
+        <option
+          value="926"
+          aria-name="Bolívar Soberano"
+          aria-symbol="Bs."
+          title="Bolívar Soberano">Bolívar Soberano (VED)</option
+        >
+        <option
+          value="840"
+          aria-name="Dólar Estadounidense"
+          aria-symbol="$"
+          title="Dólar Estadounidense"
+          disabled>Dólar Estadounidense (USD)</option
+        >
+      </select>
+      <div class="flex flex-wrap gap-2.5">
+        <img src="/payment_methods.svg" alt="Visa, Mastercard, Paypal" />
+        <img src="/zinli_card.png" alt="Zinli Card" class="h-[30px]" />
+        <img src="/binance_logo.svg" alt="Binance Logo" class="h-[30px]" />
+      </div>
+    </div>
+    <div class="copyrigth flex gap-2 text-sm font-medium text-white/50">
+      <a href="#0">Terms and conditions</a>
+      <span class="select-none text-xs">&nbsp;|&nbsp;</span>
+      <a href="#0">Privacy</a>
+      <span class="select-none text-xs">&nbsp;|&nbsp;</span>
+      <span>© Panagea</span>
+    </div>
+  </div>
 </footer>
