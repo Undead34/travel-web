@@ -8,86 +8,94 @@ import IconMapPin from "@icons/IconMapPin.astro";
 import IconCalendar from "@icons/IconCalendar.astro";
 ---
 
-<section
-  class="relative z-0 flex flex-col items-center justify-center px-5 py-52 contain-content"
->
+<section class="relative z-0 contain-content">
   <Container>
-    <div class="z-10 flex flex-col gap-2 text-center">
-      <h1 class="text-shadow text-2xl font-bold uppercase">
-        Reserve experiencias únicas
-      </h1>
-      <p class="text-shadow text-sm font-medium">
-        Explore los mejores lugares, hoteles y restaurantes de Venezuela
-      </p>
-      <search role="search">
-        <form action="#" class="flex flex-col gap-4">
-          <div class="hidden items-center justify-center gap-2">
-            <input checked id="tours" type="radio" name="search_type" hidden />
-            <label for="tours" class="radio-label">
-              <IconMap2 />
-              Tours
-            </label>
+    <div class="relative flex flex-col items-center justify-center px-5 py-52">
+      <div class="z-10 flex flex-col gap-2 text-center">
+        <h1 class="text-shadow text-2xl font-bold uppercase">
+          Reserve experiencias únicas
+        </h1>
+        <p class="text-shadow text-sm font-medium">
+          Explore los mejores lugares, hoteles y restaurantes de Venezuela
+        </p>
+        <search role="search">
+          <form action="#" class="flex flex-col gap-4">
+            <div class="hidden items-center justify-center gap-2">
+              <input
+                checked
+                id="tours"
+                type="radio"
+                name="search_type"
+                hidden
+              />
+              <label for="tours" class="radio-label">
+                <IconMap2 />
+                Tours
+              </label>
 
-            <input id="events" type="radio" name="search_type" hidden />
-            <label for="events" class="radio-label">
-              <IconTicket />
-              Eventos
-            </label>
-            <input id="destinations" type="radio" name="search_type" hidden />
-            <label for="destinations" class="radio-label">
-              <IconKayak />
-              Destinos
-            </label>
-          </div>
-
-          <div class="flex flex-col gap-1">
-            <div class="relative flex items-center">
-              <input
-                class="form-input"
-                type="text"
-                autocomplete="off"
-                placeholder="Dónde..."
-              />
-              <span class="absolute right-2 text-[#999]">
-                <IconMapPin />
-              </span>
-            </div>
-            <div class="relative flex items-center">
-              <input
-                class="form-input"
-                type="text"
-                autocomplete="off"
-                placeholder="Cuándo..."
-              />
-              <span class="absolute right-2 text-[#999]">
-                <IconCalendar />
-              </span>
-            </div>
-            <div class="relative flex items-center">
-              <input
-                class="form-input"
-                type="text"
-                autocomplete="off"
-                placeholder="Quién/es..."
-              />
-              <span class="absolute right-2 text-[#999]">
-                <IconMapPin />
-              </span>
+              <input id="events" type="radio" name="search_type" hidden />
+              <label for="events" class="radio-label">
+                <IconTicket />
+                Eventos
+              </label>
+              <input id="destinations" type="radio" name="search_type" hidden />
+              <label for="destinations" class="radio-label">
+                <IconKayak />
+                Destinos
+              </label>
             </div>
 
-            <button class="form-buttom mt-2 text-lg font-bold"> Buscar </button>
-          </div>
-        </form>
-      </search>
-    </div>
-    <div class="absolute inset-0 overflow-hidden bg-black/55">
-      <img
-        class="pointer-events-none fixed inset-0 -z-10 h-full w-auto object-cover"
-        src="https://www.ansonika.com/panagea/img/hero-home-3.jpg"
-        alt=""
-      />
+            <div class="flex flex-col gap-1">
+              <div class="relative flex items-center">
+                <input
+                  class="form-input"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Dónde..."
+                />
+                <span class="absolute right-2 text-[#999]">
+                  <IconMapPin />
+                </span>
+              </div>
+              <div class="relative flex items-center">
+                <input
+                  class="form-input"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Cuándo..."
+                />
+                <span class="absolute right-2 text-[#999]">
+                  <IconCalendar />
+                </span>
+              </div>
+              <div class="relative flex items-center">
+                <input
+                  class="form-input"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Quién/es..."
+                />
+                <span class="absolute right-2 text-[#999]">
+                  <IconMapPin />
+                </span>
+              </div>
+
+              <button class="form-buttom mt-2 text-lg font-bold">
+                Buscar
+              </button>
+            </div>
+          </form>
+        </search>
+      </div>
     </div>
   </Container>
+  <div class="absolute inset-0 overflow-hidden bg-black/55">
+    <img
+      class="pointer-events-none fixed inset-0 -z-10 h-full w-auto object-cover"
+      src="https://www.ansonika.com/panagea/img/hero-home-3.jpg"
+      alt=""
+    />
+  </div>
 </section>
 
 <style>

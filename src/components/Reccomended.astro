@@ -1,3 +1,7 @@
+---
+import "swiper/swiper-bundle.css";
+---
+
 <section>
   <div class="px-3 pt-11"></div>
   <div class="flex flex-col items-center justify-center">
@@ -9,4 +13,120 @@
       Cum doctus civibus efficiantur in imperdiet deterruisset.
     </p>
   </div>
+
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img
+          class="title"
+          src="https://splidejs.com/images/slides/image-slider/01.jpg"
+          alt=""
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="title"
+          src="https://splidejs.com/images/slides/image-slider/02.jpg"
+          alt=""
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="title"
+          src="https://splidejs.com/images/slides/image-slider/03.jpg"
+          alt=""
+        />
+      </div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
 </section>
+
+<script>
+  import Swiper from "swiper";
+
+  const swiper = new Swiper(".swiper", {});
+
+  swiper.init();
+</script>
+
+--- import "swiper/swiper-bundle.css"; ---
+
+<section>
+  <div class="px-3 pt-11"></div>
+  <div class="flex flex-col items-center justify-center">
+    <span class="mb-6 block h-0.5 w-[120px] bg-[#e1e1e1]"
+      ><em class="m-auto block h-0.5 w-[60px] bg-[#fc5b62]"></em></span
+    >
+    <h2 class="text-2xl text-[#333]">Our Popular Tours</h2>
+    <p class="text-lg font-light text-[#555]">
+      Cum doctus civibus efficiantur in imperdiet deterruisset.
+    </p>
+  </div>
+
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img
+          class="title"
+          src="https://splidejs.com/images/slides/image-slider/01.jpg"
+          alt=""
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="title"
+          src="https://splidejs.com/images/slides/image-slider/02.jpg"
+          alt=""
+        />
+      </div>
+      <div class="swiper-slide">Slide 3</div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper";
+
+  const swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+  });
+
+  swiper.init();
+</script>
