@@ -1,17 +1,21 @@
-<header>
+---
+import IconMenu2 from "@icons/IconMenu2.astro";
+import IconHeart from "@icons/IconHeart.astro";
+---
+
+<header
+    class="fixed start-0 left-0 w-full flex justify-between z-20 py-5 px-8 items-center"
+>
+    <button title="Menú de navegación">
+        <IconMenu2 />
+    </button>
+
+    <img
+        src="https://www.ansonika.com/panagea/img/logo.svg"
+        alt="Logotipo principal"
+    />
+
     <div>
-        logo
-    </div>
-    <nav>
-        <ul>
-            <li>Inicio</li>
-            <li>Viajes</li>
-            <li>Comida & bebida</li>
-            <li>Servicios adicionales</li>
-            <li>Páginas</li>
-        </ul>
-    </nav>
-    <div>
-        actions
+        <button title="Su lista de deseos"><IconHeart /></button>
     </div>
 </header>

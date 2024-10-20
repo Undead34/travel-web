@@ -1,25 +1,149 @@
-<section role="search">
-  <div>
-    <h3>Book unique experiences</h3>
-    <p>Expolore top rated tours, hotels and restaurants around the world</p>
-    <search>
-      <form action="#">
-        <div>
-          <input type="radio" name="search_type" />
-          <input type="radio" name="search_type" />
-          <input type="radio" name="search_type" />
-          <input type="radio" name="search_type" />
-        </div>
-        <div>
-          <input type="text" autocomplete="off" placeholder="Dónde..." />
-          <input type="text" autocomplete="off" placeholder="Cuándo..." />
-          <input type="text" autocomplete="off" placeholder="Quién/es..." />
-          <input type="submit" value="Buscar" />
-        </div>
-      </form>
-    </search>
-  </div>
-  <div>
-    <img src="https://www.ansonika.com/panagea/img/hero-home-3.jpg" alt="" />
-  </div>
+---
+import IconMap2 from "@icons/IconMap2.astro";
+import IconKayak from "@icons/IconKayak.astro";
+import IconTicket from "@icons/IconTicket.astro";
+import IconMapPin from "@icons/IconMapPin.astro";
+import IconCalendar from "@icons/IconCalendar.astro";
+---
+
+<section
+    class="relative z-0 py-52 contain-content flex justify-center items-center flex-col"
+>
+    <div class="flex flex-col gap-2 z-10 text-center">
+        <h1 class="text-5xl text-shadow font-bold uppercase">
+            Reserve experiencias únicas
+        </h1>
+        <p class="text-2xl text-shadow">
+            Explore los mejores lugares, hoteles y restaurantes de Venezuela
+        </p>
+        <search role="search">
+            <form action="#" class="flex flex-col gap-4">
+                <div class="flex justify-center items-center gap-2">
+                    <input
+                        checked
+                        id="tours"
+                        type="radio"
+                        name="search_type"
+                        hidden
+                    />
+                    <label for="tours" class="radio-label">
+                        <IconMap2 />
+                        Tours
+                    </label>
+
+                    <input id="events" type="radio" name="search_type" hidden />
+                    <label for="events" class="radio-label">
+                        <IconTicket />
+                        Eventos
+                    </label>
+                    <input
+                        id="destinations"
+                        type="radio"
+                        name="search_type"
+                        hidden
+                    />
+                    <label for="destinations" class="radio-label">
+                        <IconKayak />
+                        Destinos
+                    </label>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="relative flex items-center">
+                        <input
+                            class="form-input"
+                            type="text"
+                            autocomplete="off"
+                            placeholder="Dónde..."
+                        />
+                        <span class="absolute right-2 text-[#999]">
+                            <IconMapPin />
+                        </span>
+                    </div>
+                    <div class="relative flex items-center">
+                        <input
+                            class="form-input"
+                            type="text"
+                            autocomplete="off"
+                            placeholder="Cuándo..."
+                        />
+                        <span class="absolute right-2 text-[#999]">
+                            <IconCalendar />
+                        </span>
+                    </div>
+                    <div class="relative flex items-center">
+                        <input
+                            class="form-input"
+                            type="text"
+                            autocomplete="off"
+                            placeholder="Quién/es..."
+                        />
+                        <span class="absolute right-2 text-[#999]">
+                            <IconMapPin />
+                        </span>
+                    </div>
+
+                    <button class="form-buttom mt-2 text-lg font-bold">
+                        Buscar
+                    </button>
+                </div>
+            </form>
+        </search>
+    </div>
+    <div class="absolute inset-0 overflow-hidden bg-black/55">
+        <img
+            class="object-cover fixed h-full w-auto inset-0 pointer-events-none -z-10"
+            src="https://www.ansonika.com/panagea/img/hero-home-3.jpg"
+            alt=""
+        />
+    </div>
 </section>
+
+<style>
+    .text-shadow {
+        text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .radio-label {
+        @apply flex flex-col justify-center items-center bg-black/60 p-4 text-lg font-medium min-w-28 rounded-md cursor-pointer;
+    }
+
+    input[type="radio"]:checked + label {
+        @apply bg-black/70;
+    }
+
+    .form-input {
+        margin: 0;
+        display: block;
+        width: 100%;
+        line-height: 1.5;
+        background-clip: padding-box;
+        transition:
+            border-color 0.15s ease-in-out,
+            box-shadow 0.15s ease-in-out;
+        padding: 10px;
+        font-size: 0.875rem;
+        border-radius: 3px;
+        color: #495057;
+        height: 50px;
+        padding-left: 15px;
+        font-weight: 500;
+        border: none;
+        outline: none;
+    }
+
+    .form-buttom {
+        color: #fff;
+        font-size: 0.875rem;
+        padding: 0 25px;
+        height: 50px;
+        font-weight: 600;
+        background-color: #fc5b62;
+        cursor: pointer;
+        outline: 0;
+        transition: 0.3s ease-in-out;
+        border: 0;
+        width: 100%;
+        margin: 20px 0 0;
+        border-radius: 3px;
+    }
+</style>

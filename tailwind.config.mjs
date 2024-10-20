@@ -7,6 +7,7 @@ export default {
     extend: {
       colors: {
         "bright-gray": "#ededed",
+        "eerie-black": "#121921",
       },
     },
   },
