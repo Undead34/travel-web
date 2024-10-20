@@ -4,14 +4,24 @@ import IconHeart from "@icons/IconHeart.astro";
 ---
 
 <header
-  class="fixed left-0 start-0 z-20 flex w-full items-center justify-between px-8 py-5"
+  id="main-header"
+  class="fixed left-0 start-0 z-20 flex w-full items-center justify-between px-8 py-5 transition-all duration-300"
 >
   <button title="Menú de navegación">
     <IconMenu2 />
   </button>
 
   <img
+    id="logo-default"
+    class="block"
     src="https://www.ansonika.com/panagea/img/logo.svg"
+    alt="Logotipo principal"
+  />
+
+  <img
+    id="logo-sticky"
+    class="hidden"
+    src="https://ansonika.com/panagea/img/logo_sticky.svg"
     alt="Logotipo principal"
   />
 
@@ -19,3 +29,35 @@ import IconHeart from "@icons/IconHeart.astro";
     <button title="Su lista de deseos"><IconHeart /></button>
   </div>
 </header>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("main-header");
+    const logoDefault = document.getElementById("logo-default");
+    const logoSticky = document.getElementById("logo-sticky");
+
+    if (window.scrollY > 0) {
+      header.classList.add("scrolled");
+      logoDefault.classList.toggle("hidden", true);
+      logoDefault.classList.toggle("block", false);
+      logoSticky.classList.toggle("block", true);
+      logoSticky.classList.toggle("hidden", false);
+    } else {
+      header.classList.remove("scrolled");
+      logoDefault.classList.toggle("block", true);
+      logoDefault.classList.toggle("hidden", false);
+      logoSticky.classList.toggle("hidden", true);
+      logoSticky.classList.toggle("block", false);
+    }
+  });
+</script>
+
+<style>
+  .scrolled {
+    @apply bg-white text-black shadow-md;
+  }
+
+  #main-header {
+    transition: all 0.3s ease-in-out;
+  }
+</style>
